@@ -9,7 +9,7 @@ spec:
       revisionTemplate:
         spec:
           container:
-            image: docker.io/{username}/helloworld-python
+            image: docker.io/kingdo/knative-helloworld-python
             env:
               - name: TARGET
                 value: "Python Sample v1"
