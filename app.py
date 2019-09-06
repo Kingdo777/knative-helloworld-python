@@ -7,6 +7,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
+    for i in range(100000000):
+        i += 1
     target = os.environ.get('TARGET', 'World')
     return 'Hello {}!\n'.format(target)
 
