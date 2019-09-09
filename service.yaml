@@ -18,7 +18,7 @@ spec:
             image: docker.io/kingdo/knative-helloworld-python
             resources:
               requests:
-                cpu: "200m"
+                cpu: "1000m"
             env:
               - name: TARGET
                 value: "Python Sample v1"
