@@ -12,7 +12,7 @@ if [[ -z ${duration} ]]; then
     else
     duration="$2s"
 fi
-echo "GET http://helloworld-python.default.example.com" | vegeta attack -name=1qps -rate=${rate} -duration=${duration} > results.${rate}qps.${duration}.bin
+echo "GET http://helloworld-python.default.example.com" | vegeta attack -name=1qps -rate=${rate} -duration=${duration} -timeout 120s > results.${rate}qps.${duration}.bin
 cat results.${rate}qps.${duration}.bin | vegeta plot > plot.${rate}qps.${duration}.html
 sudo cp plot.${rate}qps.${duration}.html /var/www/html
 rm *.html *.bin
