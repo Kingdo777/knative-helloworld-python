@@ -19,6 +19,8 @@ spec:
             resources:
               requests:
                 cpu: "1000m"
+              limits:
+                cpu: "1000m"
             env:
               - name: TARGET
                 value: "Python Sample v1"
