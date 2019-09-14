@@ -10,9 +10,9 @@ spec:
         metadata:
           annotations:
             # Standard Kubernetes CPU-based autoscaling.
-            autoscaling.knative.dev/class:  hpa.autoscaling.knative.dev
-            autoscaling.knative.dev/metric: concurrency
-#            autoscaling.knative.dev/target: "10"
+#            autoscaling.knative.dev/class:  hpa.autoscaling.knative.dev
+#            autoscaling.knative.dev/metric: concurrency
+            autoscaling.knative.dev/target: "50"
         spec:
           container:
             image: docker.io/kingdo/knative-helloworld-python
