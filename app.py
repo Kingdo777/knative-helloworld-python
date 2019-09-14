@@ -13,9 +13,11 @@ def hello_world():
     #     i += 1
     # target = os.environ.get('TARGET', 'World')
     # return 'Hello {}!\n'.format(target)
+    time1 = time.time()
     sleep_time = request.args.get("time", 0.0, float)
     time.sleep(sleep_time / 1000)
-    return socket.gethostname()
+    time2 = time.time()
+    return str(time2 - time1)
 
 
 if __name__ == "__main__":
