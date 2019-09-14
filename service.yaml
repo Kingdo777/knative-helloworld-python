@@ -11,7 +11,7 @@ spec:
           annotations:
             # Standard Kubernetes CPU-based autoscaling.
             autoscaling.knative.dev/class:  hpa.autoscaling.knative.dev
-            autoscaling.knative.dev/metric: cpu
+            autoscaling.knative.dev/metric: concurrency
 #            autoscaling.knative.dev/target: "10"
         spec:
           container:
