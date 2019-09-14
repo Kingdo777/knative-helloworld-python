@@ -1,0 +1,16 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  annotations:
+    autoscaling.knative.dev/class: hpa.autoscaling.knative.dev
+    autoscaling.knative.dev/metric: concurrency
+    autoscaling.knative.dev/target: "50"
+  name: helloworld-python-f4qr7
+  namespace: default
+spec:
+  maxReplicas: 2147483647
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: helloworld-python-f4qr7-deployment
