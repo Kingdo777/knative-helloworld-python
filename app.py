@@ -1,7 +1,8 @@
 import os
 import socket
+import time
 
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -12,6 +13,8 @@ def hello_world():
     #     i += 1
     # target = os.environ.get('TARGET', 'World')
     # return 'Hello {}!\n'.format(target)
+    sleep_time = request.args.get("time", 0.0, float)
+    time.sleep(sleep_time / 1000)
     return socket.gethostname()
 
 
